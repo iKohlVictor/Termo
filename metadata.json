@@ -1,0 +1,5 @@
+{
+  "name": "Termo",
+  "description": "A Brazilian Portuguese Wordle-style guessing game featuring strict color validation logic, dark mode, and responsive design.",
+  "requestFramePermissions": []
+}

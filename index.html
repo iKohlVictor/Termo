@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Termo Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes flip {
+        0% {
+          transform: rotateX(0);
+          animation-timing-function: ease-in;
+        }
+        45% {
+          transform: rotateX(90deg);
+          animation-timing-function: linear;
+        }
+        55% {
+          transform: rotateX(90deg);
+          animation-timing-function: ease-out;
+        }
+        100% {
+          transform: rotateX(0);
+        }
+      }
+      .animate-flip {
+        animation: flip 0.6s forwards;
+      }
+      @keyframes shake {
+        10%, 90% { transform: translate3d(-1px, 0, 0); }
+        20%, 80% { transform: translate3d(2px, 0, 0); }
+        30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+        40%, 60% { transform: translate3d(4px, 0, 0); }
+      }
+      .animate-shake {
+        animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+      }
+      @keyframes blink-border {
+        0%, 100% { border-color: #4c4c4e; }
+        50% { border-color: #d7dadc; }
+      }
+      .active-cursor {
+        animation: blink-border 1.2s infinite;
+        border-bottom-width: 4px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body class="bg-[#121213] text-white">
+    <div id="root"></div>
+  </body>
+</html>
